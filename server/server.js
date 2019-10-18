@@ -11,9 +11,15 @@ app.use(bodyParser.json());
 
 app.get('/', function (req,res) {
     res.json({
-        "mensaje" : "conexión correcta a MONGODB y a la base de Datos Momento 2"
+        "mensaje" : "Bienvenido al examen de Momento2 "
     }) 
  });
+
+ app.get('/database', function (req,res) {
+  res.json({
+      "mensaje" : "conexión correcta a MONGODB y a la base de Datos Momento 2"
+  }) 
+});
 
  app.get('/saludo/nombre', function (req,res) {
    let nombre = req.params.nombre
